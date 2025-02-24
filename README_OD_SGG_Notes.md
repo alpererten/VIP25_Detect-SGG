@@ -24,7 +24,7 @@ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 
 Alternatively, test the Python code mentioned below (`YOLO_Detector_ROS2_Humble.py`) using an online simulation environment with ROS and Gazebo. 
 
-I found this website: **The Construct** ([https://app.theconstruct.ai/](https://app.theconstruct.ai/)) that currently allows **free simulation time (8hrs/day)** with free signup. It also has a **free 5-day ROS intro course** with other similar courses available.
+I found this website: **The Construct** ([https://app.theconstruct.ai/](https://app.theconstruct.ai/)) that currently allows free simulation time (8hrs/day) with free signup. It also has a free 5-day ROS intro course with other similar courses available.
 
 ## 2. Implementing Object Detection
 
@@ -46,7 +46,7 @@ See the written script saved in `YOLO_Detector_ROS2_Humble.py` in this GitHub re
 
 ### Brief explanation of the code: `YOLO_Detector_ROS2_Humble.py`
 
-This script is a **ROS2 node** that performs object detection using YOLOv8 on images from a Gazebo simulation camera. It also **publishes detection results as visual markers in a 3D Gazebo environment**.
+This script is a ROS2 node that performs object detection using YOLOv8 on images from a Gazebo simulation camera. It also publishes detection results as visual markers in a 3D Gazebo environment.
 
 #### Summary:
 
@@ -70,10 +70,10 @@ A ROS 2 node that handles image input, runs YOLO inference, and publishes result
 
 - **Image Callback (`image_callback`)**
   - Converts **ROS image** to **OpenCV format**.
-  - Runs **YOLO inference** to detect objects.
+  - Runs **YOLO** inference to detect objects.
   - Processes detections: **draws bounding boxes and creates 3D markers** for visualization.
-  - Publishes **processed images** and **detected object markers**.
-  - Optionally displays the image using **OpenCV**.
+  - Publishes processed images and detected object markers.
+  - Optionally displays the image using OpenCV.
 
 - **Helper Functions**
   - `get_color(class_name)`: Generates and caches consistent colors for each object class.
@@ -81,15 +81,15 @@ A ROS 2 node that handles image input, runs YOLO inference, and publishes result
 
 #### Main Function - `main()`
   - Initializes and runs the **ROS2 node**.
-  - Spins until interrupted, then shuts down **ROS2** and **OpenCV windows**.
+  - Spins until interrupted, then shuts down ROS2 and OpenCV windows.
 
+---
 ---
 
 
 
 
-
-# The Following Sections Are Saved For Later, After Succesful YOLO Implementation
+# The Following Sections Are Saved For Later, Following A Succesful YOLO Implementation
 
 ### Using DETIC for Open-Vocabulary Detection
 
