@@ -79,7 +79,7 @@ A ROS 2 node that handles image input, runs YOLO inference, and publishes result
   - `get_color(class_name)`: Generates and caches consistent colors for each object class.
   - `create_marker_gazebo(xyxy, class_name, confidence, timestamp)`: Converts 2D detections to 3D markers in Gazebo.
 
-#### Main Function - `main()`**
+#### Main Function - `main()`
   - Initializes and runs the **ROS2 node**.
   - Spins until interrupted, then shuts down **ROS2** and **OpenCV windows**.
 
@@ -87,9 +87,11 @@ A ROS 2 node that handles image input, runs YOLO inference, and publishes result
 
 
 
-# THE FOLLOWING SECTIONS ARE SAVED FOR LATER AFTER SUCCESSFUL YOLO IMPLEMENTATION
 
-### (b) Using DETIC for Open-Vocabulary Detection
+
+# The Following Sections Are Saved For Later, After Succesful YOLO Implementation
+
+### Using DETIC for Open-Vocabulary Detection
 
 **DETIC** is powerful for **open-vocabulary detection** but requires a more complex setup.
 
@@ -105,7 +107,7 @@ Run DETIC in a **ROS node** by modifying the Detectron2 inference pipeline.
 
 ---
 
-### (c) Using Vision Transformer (ViT) for Object Detection
+### Using Vision Transformer (ViT) for Object Detection
 
 ViT-based object detection is **slower** but works well for certain applications.
 
