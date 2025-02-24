@@ -1,3 +1,7 @@
+# CHOOSING TO EXCLUDE .docx files for now
+*.docx
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
