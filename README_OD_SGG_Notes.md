@@ -84,12 +84,12 @@ A ROS 2 node that handles image input, runs YOLO inference, and publishes result
   - Spins until interrupted, then shuts down ROS2 and OpenCV windows.
 
 ---
+
+# The Following Sections Are Saved For Later, Following A Succesful YOLO Implementation
+
 ---
 
 
-
-
-# The Following Sections Are Saved For Later, Following A Succesful YOLO Implementation
 
 ### Using DETIC for Open-Vocabulary Detection
 
