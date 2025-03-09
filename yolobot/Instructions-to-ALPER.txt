@@ -1,0 +1,40 @@
+#Building docker file within the project directory 
+
+cd ~/Documents/VIP-Autobots_LOCAL/VIP25_Detect-SGG/yolobot
+
+docker build -t yolobot_jazzy .
+
+
+# Allow X11 connections for GUI
+xhost +local:docker
+
+# Run the container
+docker run -it \
+    --env="DISPLAY=$DISPLAY" \
+    --env="QT_X11_NO_MITSHM=1" \
+    --env="XAUTHORITY=$XAUTHORITY" \
+    --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+    --volume="$XAUTHORITY:$XAUTHORITY:rw" \
+    --volume="/dev/dri:/dev/dri" \
+    --network=host \
+    --privileged \
+    --gpus all \
+    yolobot_jazzy
+    
+  
+  
+# To launch the model
+cd /ros2_ws
+source install/setup.bash
+ros2 launch yolobot_gazebo yolobot_launch.py
+
+
+
+In a new terminal, connect to the running container to monitor/control:
+# Get container ID
+docker ps
+# Connect to container
+docker exec -it CONTAINER_ID bash
+# Source ROS
+cd /ros2_ws
+source install/setup.bash

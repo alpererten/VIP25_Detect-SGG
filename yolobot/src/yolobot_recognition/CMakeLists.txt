@@ -17,6 +17,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(rclpy REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -32,20 +33,38 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-install(
-  DIRECTORY
-    scripts
-    launch
-  DESTINATION
-    share/${PROJECT_NAME}/
+# Make sure scripts directory exists
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/scripts)
+
+# Download YOLO model during build
+add_custom_command(
+  OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/scripts/yolov8n.pt
+  COMMAND ${Python3_EXECUTABLE} -c "from ultralytics import YOLO; YOLO('yolov8n.pt').export()"
+  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/scripts
 )
 
-install(
-  PROGRAMS
+add_custom_target(download_yolo_model ALL
+  DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/scripts/yolov8n.pt
+)
+
+# Install Python executables
+install(PROGRAMS
   scripts/yolov8_ros2_pt.py
   scripts/yolov8_ros2_subscriber.py
-  launch/launch_yolov8.launch.py
   DESTINATION lib/${PROJECT_NAME}
+  PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE
+)
+
+# Install model file
+install(FILES
+  scripts/yolov8n.pt
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+# Install launch files
+install(DIRECTORY
+  launch
+  DESTINATION share/${PROJECT_NAME}/
 )
 
 ament_package()

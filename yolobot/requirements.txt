@@ -1,0 +1,4 @@
+ultralytics==8.0.196
+catkin_pkg
+empy==3.3.2
+opencv-python-headless 
