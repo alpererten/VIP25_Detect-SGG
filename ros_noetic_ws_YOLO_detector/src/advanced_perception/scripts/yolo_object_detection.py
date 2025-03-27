@@ -11,26 +11,32 @@ class YoloObjectDetection:
     def __init__(self):
         # Initialize the ROS node
         rospy.init_node('object_detection')
+        print("Node initialized")  # Debug print
 
         # Load a pre-trained YOLOv8 object detection model
+        print("Loading YOLO model...")  # Debug print
         self.model = YOLO('/home/user/catkin_ws/src/advanced_perception/data/yolov8n.pt')
+        print("Model loaded successfully")  # Debug print
         self.yolov8_inference = Yolov8Inference()
 
         # ROS1 subscribers and publishers
+        print("Subscribing to camera topic...")  # Debug print
         self.subscription = rospy.Subscriber(
-            '/deepmind_robot1/deepmind_robot1_camera/image_raw',
+            '/camera/rgb/image_raw',  # CHANGE THE CAMERA TOPIC NAME TO MATCH THE LOCAL CAMERA TOPIC NAME FOR YOUR ROBOT
             Image,
             self.camera_callback,
             queue_size=10)
 
         self.yolov8_pub = rospy.Publisher("/Yolov8_Inference", Yolov8Inference, queue_size=1)
         self.img_pub = rospy.Publisher("/inference_result", Image, queue_size=1)
+        print("Publishers created")  # Debug print
 
     def camera_callback(self, msg):
         """ Performs object detection using the loaded YOLO model
             and processes the detection results. The image with 
             annotated detections is also published for visualization """
 
+        print("Received camera frame")  # Debug print
         img = bridge.imgmsg_to_cv2(msg, "bgr8")
         results = self.model(img) 
 

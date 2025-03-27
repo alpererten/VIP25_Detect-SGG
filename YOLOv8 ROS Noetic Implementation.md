@@ -1,8 +1,20 @@
 # Commands to build the YOLOv8 detection package in ROS Noetic:
 
-# build and source your workspace:
+# Note
+you may need to install the following packages for YOLO to work in your local machine
 ```bash
-cd ~/ros_noetic_ws_YOLO_detector
+sudo pip3 install ultralytics      
+pip3 install opencv-python
+sudo apt-get install ros-noetic-cv-bridge
+``` 
+
+# Note
+Change the camera topic name referenced inside the yolo_object_detection.py node to match the name of your local camera topic name (see comment on line 25 in yolo_object_detection.py)
+
+# build and source your workspace:
+# change this directory name to match your local setup for ros workspace
+```bash
+cd ~/catkin_ws      #change this directory name to match your local setup for ros workspace
 catkin_make
 source devel/setup.bash
 ```
