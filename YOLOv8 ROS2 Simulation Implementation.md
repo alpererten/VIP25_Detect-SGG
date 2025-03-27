@@ -1,9 +1,9 @@
 # Commands to activate the YOLOv8 detection package and run in simulation:
 
 # Note: You'll likely need to install the required packages used for the YOLO object detection node:
-rclpy
-ultralytics library
-cv_bridge
+-rclpy
+-ultralytics library
+-cv_bridge
 
 # Launch RViz2 (Terminal 1)
 ```bash
