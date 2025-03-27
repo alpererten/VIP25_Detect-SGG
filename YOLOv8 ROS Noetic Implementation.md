@@ -1,7 +1,7 @@
 # Commands to build the YOLOv8 detection package in ROS Noetic:
 
 # Note
-you may need to install the following packages for YOLO to work in your local machine
+you may need to install the following packages for YOLO to work on your local machine
 ```bash
 sudo pip3 install ultralytics      
 pip3 install opencv-python
