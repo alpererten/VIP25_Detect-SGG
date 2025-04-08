@@ -1,4 +1,11 @@
+
 # Commands to activate the person follower package and YOLOv8 detection package and run in simulation:
+- The tested simulation assumes that the robot is controlled by a diff_drive_controller which subscribes to the cmd_vel publisher created within the yolo_person_follower.py code
+```bash
+cd ~/ros2_ws/src
+git clone https://github.com/ros-controls/ros2_controllers.git
+cd ros2_controllers/diff_drive_controller
+```
 
 # Note: You'll likely need to install the required packages used for the YOLO object detection node:
 - rclpy
