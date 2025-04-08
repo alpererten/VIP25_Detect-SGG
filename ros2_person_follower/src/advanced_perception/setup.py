@@ -21,7 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'yolo_object_detection = advanced_perception.yolo_object_detection:main',
-            'yolo_person_follower = advanced_perception.yolo_person_follower:main',
+            'yolo_target_object_follower = advanced_perception.yolo_target_object_follower:main',
         ],
     },
 )
