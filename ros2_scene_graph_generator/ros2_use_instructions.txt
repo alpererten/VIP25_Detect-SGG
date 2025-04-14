@@ -1,0 +1,10 @@
+source ~/ros2_venv/bin/activate
+source /opt/ros/jazzy/setup.bash
+source ~/ros2_ws/install/setup.bash
+
+cd ~/ros2_ws/
+
+webcam topic name:  /webcam_image
+
+to run the webcam node:
+ros2 run my_camera webcam_node

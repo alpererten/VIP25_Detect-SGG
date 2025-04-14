@@ -38,6 +38,7 @@ cd ~/ros2_ws/
 colcon build;source install/setup.bash
 ros2 run advanced_perception yolo_segmentation
 ```
+python3 src/advanced_perception/advanced_perception/yolo_segmentation.py
 
 # Compile and run to create a snapshot image of the detected object pixel clouds (Terminal 4) - OPTIONAL STEP
 ```bash
