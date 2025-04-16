@@ -1,0 +1,24 @@
+source ~/ros2_venv/bin/activate
+source /opt/ros/jazzy/setup.bash
+source ~/ros2_ws/install/setup.bash
+
+cd ~/ros2_ws/
+
+webcam topic name:  /webcam_image
+
+to run the webcam node:
+ros2 run my_camera webcam_node
+
+
+
+
+Record3D camera instruction:
+To check on iphone connection being detected: 
+idevice_id -l
+
+run phone camera nodes directly:
+python3 src/record3d_ros2/record3d_ros2/record3d_publisher.py
+
+iphone camera topic names
+iphone_depth_image
+iphone_rgb_image
