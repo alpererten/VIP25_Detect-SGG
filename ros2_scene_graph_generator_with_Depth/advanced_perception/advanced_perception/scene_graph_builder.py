@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import rclpy
 from rclpy.node import Node
 from custom_msgs.msg import YoloSegmentationMsg

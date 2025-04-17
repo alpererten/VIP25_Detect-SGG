@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# The code below is referenced from The Construct ROS2 Perception in 5 Days course tutorial, section 6.2 
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
