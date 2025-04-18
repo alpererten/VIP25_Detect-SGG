@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# The following code is adapted from Section 6.2 of The Construct’s ROS2 Perception in 5 Days course and modified to use YOLO11 object detection model.
 from ultralytics import YOLO
 import rclpy
 from rclpy.node import Node

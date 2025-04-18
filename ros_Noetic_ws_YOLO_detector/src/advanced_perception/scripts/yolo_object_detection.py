@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# The following code is originally adapted from Section 6.2 of The Construct’s ROS2 Perception in 5 Days course and modified to work in ROS Noetic environment.
 from ultralytics import YOLO
 import rospy
 from sensor_msgs.msg import Image
