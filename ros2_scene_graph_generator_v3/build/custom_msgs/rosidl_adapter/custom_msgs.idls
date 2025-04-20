@@ -1,6 +1,0 @@
-/home/alper/ros2_ws/build/custom_msgs/rosidl_adapter/custom_msgs:msg/InferenceResult.idl
-/home/alper/ros2_ws/build/custom_msgs/rosidl_adapter/custom_msgs:msg/YoloInference.idl
-/home/alper/ros2_ws/build/custom_msgs/rosidl_adapter/custom_msgs:msg/SegmentationResult.idl
-/home/alper/ros2_ws/build/custom_msgs/rosidl_adapter/custom_msgs:msg/YoloSegmentationMsg.idl
-/home/alper/ros2_ws/build/custom_msgs/rosidl_adapter/custom_msgs:msg/DetectedSurface.idl
-/home/alper/ros2_ws/build/custom_msgs/rosidl_adapter/custom_msgs:msg/DetectedSurfaces.idl
