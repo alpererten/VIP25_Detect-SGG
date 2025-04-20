@@ -1,0 +1,26 @@
+source ~/ros2_venv/bin/activate
+source /opt/ros/jazzy/setup.bash
+source ~/ros2_ws/install/setup.bash
+cd ~/ros2_ws/
+
+
+to run the iphone cam node:
+python3 src/record3d_ros2/record3d_ros2/record3d_publisher.py
+
+Activate object segmentation node:
+python3 src/advanced_perception/advanced_perception/yolo_segmentation.py
+
+Activate surface detector node:
+python3 src/advanced_perception/advanced_perception/surface_detector.py
+
+Activate scene graph builder node:
+python3 src/advanced_perception/advanced_perception/scene_graph_builder.py
+
+Activate intermittent scene graph builder node:
+python3 src/advanced_perception/advanced_perception/scene_graph_builder_int.py
+
+Activate intermittent scene graph builder node:
+python3 src/advanced_perception/advanced_perception/scene_graph_builder_oncall.py
+
+to run rviz viewer:
+rviz2

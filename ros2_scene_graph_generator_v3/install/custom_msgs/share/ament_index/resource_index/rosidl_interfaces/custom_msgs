@@ -1,0 +1,12 @@
+msg/DetectedSurface.idl
+msg/DetectedSurface.msg
+msg/DetectedSurfaces.idl
+msg/DetectedSurfaces.msg
+msg/InferenceResult.idl
+msg/InferenceResult.msg
+msg/SegmentationResult.idl
+msg/SegmentationResult.msg
+msg/YoloInference.idl
+msg/YoloInference.msg
+msg/YoloSegmentationMsg.idl
+msg/YoloSegmentationMsg.msg
